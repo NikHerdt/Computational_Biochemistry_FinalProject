@@ -1,0 +1,13 @@
+package require psfgen
+topology ./forcefields/top_all22_prot.inp
+
+segment brca {
+	pdb 1gav.pdb
+	first NTER
+	last CT3
+}
+
+coordpdb 1gav.pdb BRCA
+
+writepsf brca.psf
+writepdb brca.pdb
